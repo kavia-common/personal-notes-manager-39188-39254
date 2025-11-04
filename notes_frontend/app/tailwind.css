@@ -2,11 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #2563EB;
+  --color-secondary: #F59E0B;
+  --color-error: #EF4444;
+  --color-bg: #f9fafb;
+  --color-surface: #ffffff;
+  --color-text: #111827;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-[#f9fafb] text-[#111827];
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
+  }
+}
+
+@layer base {
+  * {
+    @apply selection:bg-blue-200 selection:text-slate-900;
   }
 }

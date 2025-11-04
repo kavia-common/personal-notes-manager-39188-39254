@@ -1,40 +1,21 @@
-# Welcome to Remix!
+# Personal Notes Manager (Remix)
 
-- 📖 [Remix docs](https://remix.run/docs)
+Ocean Professional themed personal notes manager with client-side persistence.
 
 ## Development
+- Install dependencies: `npm install`
+- Run the dev server: `npm run dev` (served at port 3000)
 
-Run the dev server:
+## Features
+- Sidebar with note list and New button
+- Note detail editor with title, content, save, delete
+- LocalStorage persistence (no backend)
+- Remix loaders/actions used safely for client-side storage
+- Responsive modern UI with Tailwind CSS
 
-```shellscript
-npm run dev
-```
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+## Notes
+- Reads optional environment flags via `import.meta.env.*` when present (e.g., VITE_NODE_ENV).
+- Routes:
+  - `/` index empty state
+  - `/notes/new` create new then redirect
+  - `/notes/:id` edit/view
